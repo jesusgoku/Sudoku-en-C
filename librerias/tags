@@ -1,0 +1,28 @@
+boolean	gnrlslib.h	/^typedef enum { False = 0, True = 1 } boolean;$/
+chrtonum	mistrlib.c	/^char chrtonum(const char n){$/
+clear	printlib.c	/^void clear(){ fpurge(stdin); }$/
+cls	printlib.c	/^void cls(){ system("clear"); }$/
+error_columna	sudokulib.c	/^boolean error_columna(uchar A[][N][I],uchar val, u/
+error_cuadrante	sudokulib.c	/^boolean error_cuadrante(uchar A[][N][I],uchar val,/
+error_edicion	sudokulib.c	/^boolean error_edicion(uchar A[][N][I], uchar f, uc/
+error_fila	sudokulib.c	/^boolean error_fila(uchar A[][N][I],uchar val, ucha/
+fijar_valor	sudokulib.c	/^void fijar_valor(uchar A[][N][I],uchar val, uchar /
+instrucciones	printlib.c	/^void instrucciones(){$/
+llenar_tablero	sudokulib.c	/^void llenar_tablero(uchar A[][N][I]){$/
+logo_sudoku	printlib.c	/^void logo_sudoku(){$/
+mistrcpy	mistrlib.c	/^void mistrcpy(char *dest, const char *src){$/
+mistrlen	mistrlib.c	/^int mistrlen(char *c){$/
+mostrar_matriz	sudokulib.c	/^void mostrar_matriz(uchar A[][N][I]){$/
+mostrar_tablero	sudokulib.c	/^void mostrar_tablero(uchar A[][N][I]){$/
+pausa	printlib.c	/^void pausa(){$/
+pedir_caracter	sudokulib.c	/^uchar pedir_caracter(){$/
+pedir_coord	sudokulib.c	/^uchar pedir_coord(uchar *msj){$/
+pedir_valor	sudokulib.c	/^uchar pedir_valor(){$/
+pregunta_yn	sudokulib.c	/^uchar pregunta_yn(const char *pregunta){$/
+print_center	printlib.c	/^void print_center(char *c, int col){$/
+print_repeat_char	printlib.c	/^void print_repeat_char(char c,int n){$/
+sudoku_ini	sudokulib.c	/^void sudoku_ini(uchar A[][N][I], uchar n){$/
+tablero_lleno	sudokulib.c	/^boolean tablero_lleno(uchar A[][N][I]){$/
+uchar	sudokulib.h	/^typedef unsigned char uchar;$/
+val_error	sudokulib.c	/^boolean val_error(uchar A[][N][I], uchar val, ucha/
+val_error_msj	sudokulib.c	/^boolean val_error_msj(uchar A[][N][I], uchar val, /
