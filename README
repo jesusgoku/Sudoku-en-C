@@ -1,5 +1,5 @@
 ---------------------------------
-SUDOKU - UN JUEGO DE LOGIA
+SUDOKU - UN JUEGO DE LOGICA
 ---------------------------------
 
 El juego consiste en un tablero de 9x9, dividido en regiones de 3x3 llamados
@@ -90,4 +90,3 @@ Ramo: Fundamentos de Programacion
 Profesora: Francia Jimenez
 Bibliografia: Introduccion a la Programacion en C (Andres Marzal - Isabel Gracia)
 Alumno: Jesus Urrutia
-RUT: 16.073.876-6
