@@ -11,7 +11,7 @@ sudoku: $(OBJETOS)
 
 sudoku.o: sudoku.c
 	$(CC) $(CFLAGS) -c sudoku.c
-    
+
 gnrlslib.o: gnrlslib.c
 	$(CC) $(CFLAGS) -c gnrlslib.c
 
