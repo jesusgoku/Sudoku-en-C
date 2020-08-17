@@ -7,7 +7,7 @@
 
 #ifndef CONSOLE_COLS
 #define CONSOLE_COLS 80
-#endif CONSOLE_COLS
+#endif // CONSOLE_COLS
 
 // Prototipos de Funciones
 void instrucciones();
@@ -45,7 +45,7 @@ void instrucciones(){
 
 void print_repeat_char(char c,int n){
     /* Imprime un caracter c repetido n veces
-     
+
      Argumentos:
      char c -> Caracter que se quiere repetir
      char n -> Numero de veces que se repetica el caracter
@@ -56,11 +56,11 @@ void print_repeat_char(char c,int n){
 
 void print_center(char *c, int col){
     /* Imprime una cadena centrada en una columna de ancho col
-      
+
       Argumentos:
       char *c -> puntero a la cadena que se centrara
       int col -> Ancho de la columna en la que se desea centrar
-     
+
     */
     int len,i,colini;
     len = mistrlen(c) / 2;
@@ -72,7 +72,7 @@ void print_center(char *c, int col){
 
 void pausa(){
     /* Introduce una pausa en la ejecucion esperando la respuesta del usuario
-     
+
     */
     printf("\nPresione enter para continuar...");
     clear();
@@ -83,12 +83,12 @@ void pausa(){
   dar problemas en distintas plataformas, por eso se ha optado por una
   compilacion condicional esperando una orden pasada por medio del gcc con el
   comando -DETIQUETA
-  
+
   Las funciones son las siguientes:
-  
+
   cls: Realiza una limpieza de la pantalla
   clear: Limpiar el buffer de entrada
- 
+
 */
 
 #ifdef MAC
@@ -136,4 +136,4 @@ void logo_sudoku(){
     pausa();
 }
 
-#endif __PRINTLIB_C__
+#endif // __PRINTLIB_C__

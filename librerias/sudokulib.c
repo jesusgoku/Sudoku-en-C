@@ -21,7 +21,7 @@
 #ifndef __UCHAR__
 #define __UCHAR__
 typedef unsigned char uchar;
-#endif __UCHAR__
+#endif // __UCHAR__
 
 // Prototipo de Funciones
 void llenar_tablero(uchar A[][N][I]);
@@ -44,10 +44,10 @@ uchar pregunta_yn(const char *pregunta);
 // Cuerpo de Funciones
 void llenar_tablero(uchar A[][N][I]){
     /* Inicializa el tablero a 0
-      
+
       Argumentos:
       uchar A[][N][I] -> Matriz del tablero
-     
+
     */
     uchar i = 0, j = 0, k = 0;
     for(i = 0;i < N;i++) for(j = 0;j < N;j++) for(k = 0;k < I;k++) A[i][j][k] = 0;
@@ -55,10 +55,10 @@ void llenar_tablero(uchar A[][N][I]){
 
 void mostrar_matriz(uchar A[][N][I]){
     /* Muestra la matriz por pantalla
-      
+
       Argumetos:
       uchar A[][N][I] -> Matriz del tablero
-     
+
     */
     uchar i = 0, j = 0;
     for(i = 0;i < N;i++){
@@ -72,10 +72,10 @@ void mostrar_matriz(uchar A[][N][I]){
 
 void mostrar_tablero(uchar A[][N][I]){
     /* Muestra el tablero de sudoku con formato
-      
+
       Argumentos:
       uchar A[][N][I] -> Matriz del tablero
-     
+
     */
     uchar i = 0, j = 0, k = 0;
     for(i = 0;i < N;i++){
@@ -111,17 +111,17 @@ void mostrar_tablero(uchar A[][N][I]){
 
 boolean val_error(uchar A[][N][I], uchar val, uchar f, uchar c){
     /* Verifica que el valor cumpla las reglas del juego
-      
+
       Argumentos:
       uchar A[][N][I] -> Matriz del tablero
       uchar val -> valor a comprobar
       uchar f -> fila de comprobacion
       uchar c -> columna de comprobacion
-      
+
       Retorno:
       True -> Si hay error
       False -> Si no inflinge las reglas
-     
+
     */
     uchar i = 0, j = 0;
     uchar fini = 0, cini = 0;
@@ -151,18 +151,18 @@ boolean val_error(uchar A[][N][I], uchar val, uchar f, uchar c){
 
 boolean val_error_msj(uchar A[][N][I], uchar val, uchar f, uchar c, uchar *msj){
     /* Verifica que se cumplan las reglas del juego y genera un msj
-      
+
       Argumentos:
       uchar A[][N][I] -> Matriz del tablero
       uchar val -> Valor a comprobar
       uchar f -> Fila de comprobacion
       uchar c -> Columna de comprobacion
       uchar *msj -> Puntero a donde se copiara el mensaje de error
-      
+
       Retorno:
       True -> Si hay error
       False -> Si no inflinge las reglas
-     
+
     */
     uchar i = 0, j = 0;
     uchar fini = 0, cini = 0;
@@ -203,16 +203,16 @@ boolean val_error_msj(uchar A[][N][I], uchar val, uchar f, uchar c, uchar *msj){
 
 boolean error_fila(uchar A[][N][I],uchar val, uchar f){
     /* Verifica que el valor val no se repita en la fila f
-      
+
       Argumentos:
       uchar A[][N][I] -> Matriz del tablero
       uchar val -> Valor a comprobar
       uchar f -> Fila a ser comprobada
-      
+
       Retorno:
       True -> Si hay error
       False -> Si todo ha ido bien
-     
+
     */
     uchar i = 0;
     for(i = 0;i < N;i++) if(A[f][i][0] == val) return True;
@@ -221,16 +221,16 @@ boolean error_fila(uchar A[][N][I],uchar val, uchar f){
 
 boolean error_columna(uchar A[][N][I],uchar val, uchar c){
     /* Verifica que el valor val no se repita en la columna c
-      
+
       Argumentos:
       uchar A[][N][I] -> Matriz del tablero
       uchar val -> Valor a comprobar
       uchar c -> Columna a ser comprobada
-      
+
       Retorno:
       True -> si hay error
       False -> si todo ha ido bien
-     
+
     */
     uchar i = 0;
     for(i = 0;i < N;i++) if(A[i][c][0] == val) return True;
@@ -239,17 +239,17 @@ boolean error_columna(uchar A[][N][I],uchar val, uchar c){
 
 boolean error_cuadrante(uchar A[][N][I],uchar val, uchar f, uchar c){
     /* Verifica que el valor val no se repita en el cuadrante
-      
+
       Argumentos:
       uchar A[][N][I] -> Matriz del tablero
       uchar val -> Valor a comprobar
       uchar f -> Fila en donde se quiere comprobar
       uchar c -> Columna en donde se quiere comprobar
-      
+
       Retorno:
       True -> Hay error
       False -> No hay error
-     
+
     */
     uchar i = 0, j = 0;
     uchar fini = 0, cini = 0;
@@ -267,40 +267,40 @@ boolean error_cuadrante(uchar A[][N][I],uchar val, uchar f, uchar c){
 
 boolean error_edicion(uchar A[][N][I], uchar f, uchar c){
     /* Verifica que una casilla del tablero sea editable
-      
+
       Argumentos:
       uchar A[][N][I] -> Matriz del tablero
       uchar f -> Fila de la casilla
       uchar -> Columna de la casilla
-      
+
       Retorno:
       True -> Hay Error (No es editable)
       False -> No hay error (Es editable)
-     
+
     */
     return A[f][c][1] ? True : False;
 }
 
 void fijar_valor(uchar A[][N][I],uchar val, uchar f, uchar c){
     /* Guarda el valor en la casilla
-      
+
       Argumentos:
       uchar A[][N][I] -> Matriz del tablero
       uchar val -> Valor a guardar
       uchar f -> Fila en donde se guardara
       uchar c -> Columna en donde se guardara
-     
+
     */
     A[f][c][0] = val;
 }
 
 void sudoku_ini(uchar A[][N][I], uchar n){
     /* Inicializa en tablero de sudoku con n valores iniciales (1 <= n <= 17)
-      
+
       Argumentos:
       uchar A[][N][I] -> Matriz del tablero
       uchar n -> Numero de valores iniciales (1 <= n <= 17)
-     
+
     */
     uchar i = 0,f = 0, c  = 0, val = 0, contador = 0;
     srand(time(NULL));
@@ -321,10 +321,10 @@ void sudoku_ini(uchar A[][N][I], uchar n){
 
 uchar pedir_valor(){
     /* Pide un valor al usuario en 0 y 9
-      
+
       Retorno:
       El valor ingresado por el usuario
-     
+
     */
     unsigned int valor = 0;
     while(True){
@@ -339,13 +339,13 @@ uchar pedir_valor(){
 
 uchar pedir_coord(uchar *msj){
     /* Pide una coordenada al usuario
-      
+
       Argumentos:
       uchar *msj -> Intrucciones para el valor a ingresar
-      
+
       Retorno:
       Coordenada ingresada por el usuario
-     
+
     */
     uchar coord;
     while(True){
@@ -361,10 +361,10 @@ uchar pedir_coord(uchar *msj){
 
 uchar pedir_caracter(){
     /* Pide un caracter al usuario
-      
+
       Retorno:
       El caracter ingresado por el usuario
-     
+
     */
     uchar caracter = 0;
     printf("\nIngrese valor(0-9) o (s)alir o (r)einiciar: ");
@@ -376,14 +376,14 @@ uchar pedir_caracter(){
 
 boolean tablero_lleno(uchar A[][N][I]){
     /* Verifica si el tablero esta lleno
-      
+
       Argumentos:
       uchar A[][N][I] -> tablero de sudoku
-      
+
       Retorno:
       True -> El tablero esta lleno
       False -> El tablero aun no esta lleno
-     
+
     */
     uchar i = 0, j = 0;
     for(i = 0;i < N;i++)
@@ -395,13 +395,13 @@ boolean tablero_lleno(uchar A[][N][I]){
 
 uchar pregunta_yn(const char *pregunta){
     /* Pregunta al usuario pregunta esperando y/n
-      
+
       Argumentos:
       const char *pregunta -> Pregunta a ser respondida por el usuario
-     
+
      Retorno:
      Respuesta del usuario
-     
+
     */
     uchar respuesta;
     while(True){
@@ -414,4 +414,4 @@ uchar pregunta_yn(const char *pregunta){
     return respuesta;
 }
 
-#endif __SUDOKULIB_C__
+#endif // __SUDOKULIB_C__

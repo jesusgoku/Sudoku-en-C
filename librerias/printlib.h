@@ -7,7 +7,7 @@
 
 #ifndef CONSOLE_COLS
 #define CONSOLE_COLS 80
-#endif CONSOLE_COLS
+#endif // CONSOLE_COLS
 
 // Prototipos de Funciones
 void instrucciones(); // Muestra las instrucciones
@@ -18,4 +18,4 @@ void pausa(); // Crea una pausa en la ejecucion, esperando la accion del usuario
 void clear(); // Limpia el buffer de entrada
 void logo_sudoku(); // Muestra el logo del juego
 
-#endif __PRINTLIB_H__
+#endif // __PRINTLIB_H__

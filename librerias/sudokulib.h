@@ -21,7 +21,7 @@
 #ifndef __UCHAR__
 #define __UCHAR__
 typedef unsigned char uchar;
-#endif __UCHAR__
+#endif // __UCHAR__
 
 // Prototipo de Funciones
 void llenar_tablero(uchar A[][N][I]); // Llena tablero de 0
@@ -41,4 +41,4 @@ uchar pedir_caracter(); // Pide un caracter al usuario
 boolean tablero_lleno(uchar A[][N][I]); // Verifica si el tablero esta lleno
 uchar pregunta_yn(const char *pregunta); // Pregunta al usuario, espera respuesta y/n
 
-#endif __SUDOKULIB_H__
+#endif // __SUDOKULIB_H__
