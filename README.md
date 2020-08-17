@@ -1,6 +1,4 @@
----------------------------------
-SUDOKU - UN JUEGO DE LOGICA
----------------------------------
+# SUDOKU - UN JUEGO DE LOGICA
 
 El juego consiste en un tablero de 9x9, dividido en regiones de 3x3 llamados
 cuadrantes. Cada casilla puede contener valores del 1-9 respetando las
@@ -10,9 +8,7 @@ a) El valor debe ser unico en su fila
 b) El valor debe ser unico en su columna
 c) El valor debe ser unico en su cuadrante
 
----------------------------------
-CONSIDERACIONES DE COMPILACION
----------------------------------
+## CONSIDERACIONES DE COMPILACION
 
 El programa fue desarrollado principalmente en entorno MAC (OSX 10.7 - gcc 4.2)
 donde se realizaron las ultimas pruebas de funcionamiento, a pesar de ello el
@@ -21,9 +17,7 @@ y windows con opciones que se especifican en el apartado de "Instrucciones de
 Compilacion". Aunque por la falta de pruebas en las demas plataformas
 disponibles el programa pueda presentar algun error inesperado.
 
----------------------------------
-INSTRUCCIONES DE COMPILACION
----------------------------------
+## INSTRUCCIONES DE COMPILACION
 
 Para facilitar el proceso de compilacion se ha creado un archivo "Makefile",
 para ser usado por la utilidad "make" y asi realizar la compilacion con un
@@ -48,9 +42,7 @@ Si todo sale bien deberias tener tu ejecutable:
 sudoku -> Para plataformas linux o mac
 sudoku.exe -> Para windows o cygwin
 
-----------------------------------
-COMPILACION MANUAL
-----------------------------------
+## COMPILACION MANUAL
 
 En caso de querer realizar la compilacion manualmente se debe correr la,
 siguiente orden en consola:
@@ -67,9 +59,7 @@ CYGWIN -> para el emulador de bash en windows cygwin
 
 Con esto deberias obtener tu ejecutable.
 
-----------------------------------
-COMENTARIOS DE IMPLEMENTACION
-----------------------------------
+## COMENTARIOS DE IMPLEMENTACION
 
 Como los valores a ser almacenados en cada casilla del tablero pueden ser
 valores en el rago de 1-9 tome la decision de en lugar de ocupar una matriz
@@ -83,9 +73,8 @@ Es claro que tal ves para un juego como este el ahorro no se note y sea
 insignificante por las dimensiones de mi arreglo, pero en otras escenarios
 tal ves este tipo de optimizaciones puedan ayudar al programa.
 
------------------------------------
-CREDITOS
------------------------------------
+## CREDITOS
+
 Ramo: Fundamentos de Programacion
 Profesora: Francia Jimenez
 Bibliografia: Introduccion a la Programacion en C (Andres Marzal - Isabel Gracia)
